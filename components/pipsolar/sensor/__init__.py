@@ -73,6 +73,8 @@ CONF_EEPROM_VERSION = "eeprom_version"
 CONF_DEVICE_PROTOCOL_ID = "device_protocol_id"
 CONF_PV_CHARGING_POWER = "pv_charging_power"
 
+CONF_DEVICE_PROTOCOL_ID = "device_protocol_id"
+
 
 TYPES = {
     CONF_GRID_RATING_VOLTAGE: sensor.sensor_schema(
