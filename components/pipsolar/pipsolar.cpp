@@ -758,22 +758,14 @@ void Pipsolar::loop() {
       case POLLING_QT:
         ESP_LOGD(TAG, "Decode QT");
         if (this->last_qt_) {
-          this->last_qt_->publish_state(tmp[2:]);
+          this->last_qt_->publish_state(tmp[1:]);
         }
         this->state_ = STATE_POLL_DECODED;
         break;
       case POLLING_QPI:
         ESP_LOGD(TAG, "Decode -- QPI");
         if (this->device_protocol_id_) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          this->device_protocol_id_->publish_state(tmp);
-=======
           this->device_protocol_id_->publish_state(tmp[1:]);
->>>>>>> fcd19af (	modified:   components/pipsolar/pipsolar.cpp)
-=======
-          this->device_protocol_id_->publish_state(tmp[2:]);
->>>>>>> 91f0927 (	modified:   components/pipsolar/pipsolar.cpp)
         }
         this->state_ = STATE_POLL_DECODED;
         break;
