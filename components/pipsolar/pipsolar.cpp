@@ -433,6 +433,7 @@ void Pipsolar::loop() {
         this->state_ = STATE_IDLE;
         break;
       case POLLING_QT:
+      case POLLING_QPI:
       //case POLLING_QVFW:
       //case QMCHGCR: //Enquiry selectable value about max charging current   
       case POLLING_QMN:
@@ -757,6 +758,13 @@ void Pipsolar::loop() {
         ESP_LOGD(TAG, "Decode QT");
         if (this->last_qt_) {
           this->last_qt_->publish_state(tmp);
+        }
+        this->state_ = STATE_POLL_DECODED;
+        break;
+      case POLLING_QPI:
+        ESP_LOGD(TAG, "Decode QPI");
+        if (this->last_qpi_) {
+          this->last_qpi_->publish_state(tmp);
         }
         this->state_ = STATE_POLL_DECODED;
         break;
