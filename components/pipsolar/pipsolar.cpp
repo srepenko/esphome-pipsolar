@@ -749,6 +749,7 @@ void Pipsolar::loop() {
               break;
           }
         }
+        
         if (this->last_qpiws_) {
           this->last_qpiws_->publish_state(tmp);
         }
