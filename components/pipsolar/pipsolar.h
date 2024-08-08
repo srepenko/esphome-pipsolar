@@ -123,7 +123,7 @@ class Pipsolar : public uart::UARTDevice, public PollingComponent {
   PIPSOLAR_VALUED_TEXT_SENSOR(device_mode, QMOD, char)
 
 // QPI values
-  PIPSOLAR_VALUED_TEXT_SENSOR(device_protocol_id, QPI, *char)
+  PIPSOLAR_VALUED_TEXT_SENSOR(device_protocol_id, QPI, std::string)
 
 // QT values
   PIPSOLAR_SENSOR(device_time, QT, int)
