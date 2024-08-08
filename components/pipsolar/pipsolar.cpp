@@ -433,8 +433,8 @@ void Pipsolar::loop() {
         this->state_ = STATE_IDLE;
         break;
       case POLLING_QT:
-      case POLLING_QVFW:
-      case QMCHGCR: //Enquiry selectable value about max charging current   
+      //case POLLING_QVFW:
+      //case QMCHGCR: //Enquiry selectable value about max charging current   
       case POLLING_QMN:
         this->state_ = STATE_IDLE;
         break;
