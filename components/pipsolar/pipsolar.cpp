@@ -758,7 +758,7 @@ void Pipsolar::loop() {
       case POLLING_QT:
         ESP_LOGD(TAG, "Decode QT");
         if (this->last_qt_) {
-          this->last_qt_->publish_state(''.join(tmp)[1:]);
+          this->last_qt_->publish_state(''.join(tmp));
         }
         this->state_ = STATE_POLL_DECODED;
         break;
