@@ -121,6 +121,9 @@ class Pipsolar : public uart::UARTDevice, public PollingComponent {
   // QMOD values
   PIPSOLAR_VALUED_TEXT_SENSOR(device_mode, QMOD, char)
 
+// QT values
+  PIPSOLAR_SENSOR(device_time, QT, int)
+
   // QFLAG values
   PIPSOLAR_BINARY_SENSOR(silence_buzzer_open_buzzer, QFLAG, int)
   PIPSOLAR_BINARY_SENSOR(overload_bypass_function, QFLAG, int)
