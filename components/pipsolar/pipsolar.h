@@ -23,6 +23,7 @@ enum ENUMPollingCommand {
   POLLING_QT = 5,
   POLLING_QMN = 6,
   POLLING_QBATCD = 7,
+  POLLING_QPI = 8,
 };
 struct PollingCommand {
   uint8_t *command;
@@ -120,6 +121,9 @@ class Pipsolar : public uart::UARTDevice, public PollingComponent {
 
   // QMOD values
   PIPSOLAR_VALUED_TEXT_SENSOR(device_mode, QMOD, char)
+
+// QPI values
+  PIPSOLAR_VALUED_TEXT_SENSOR(device_protocol_id, QPI, char)
 
 // QT values
   PIPSOLAR_SENSOR(device_time, QT, int)
