@@ -74,6 +74,7 @@ CONF_DEVICE_PROTOCOL_ID = "device_protocol_id"
 CONF_PV_CHARGING_POWER = "pv_charging_power"
 
 
+
 TYPES = {
     CONF_GRID_RATING_VOLTAGE: sensor.sensor_schema(
         unit_of_measurement=UNIT_VOLT,
