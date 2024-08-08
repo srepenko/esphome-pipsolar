@@ -760,7 +760,7 @@ void Pipsolar::loop() {
         ESP_LOGD(TAG, "Decode QT");
         if (this->last_qt_) {
           char* substr = tmp + 1;
-          this->last_qt_->publish_state(s);
+          this->last_qt_->publish_state(substr);
         }
         this->state_ = STATE_POLL_DECODED;
         break;
