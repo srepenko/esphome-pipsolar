@@ -763,8 +763,8 @@ void Pipsolar::loop() {
         break;
       case POLLING_QPI:
         ESP_LOGD(TAG, "Decode QPI");
-        if (this->last_qpi_) {
-          this->last_qpi_->publish_state(tmp);
+        if (this->device_id_protocol_id_) {
+          this->device_id_protocol_id_->publish_state(tmp);
         }
         this->state_ = STATE_POLL_DECODED;
         break;
