@@ -70,6 +70,7 @@ CONF_CONFIGURATION_STATUS = "configuration_status"
 CONF_SCC_FIRMWARE_VERSION = "scc_firmware_version"
 CONF_BATTERY_VOLTAGE_OFFSET_FOR_FANS_ON = "battery_voltage_offset_for_fans_on"
 CONF_EEPROM_VERSION = "eeprom_version"
+CONF_DEVICE_PROTOCOL_ID = "device_protocol_id"
 CONF_PV_CHARGING_POWER = "pv_charging_power"
 
 
@@ -261,6 +262,9 @@ TYPES = {
         device_class=DEVICE_CLASS_VOLTAGE,
     ),
     CONF_EEPROM_VERSION: sensor.sensor_schema(
+        accuracy_decimals=1,
+    ),
+    CONF_DEVICE_PROTOCOL_ID: sensor.sensor_schema(
         accuracy_decimals=1,
     ),
     CONF_PV_CHARGING_POWER: sensor.sensor_schema(
